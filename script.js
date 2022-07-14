@@ -62,11 +62,11 @@ const getProject = fetch('style_links.json')
     .map((project) => {
         return`<div class="stylebox">
              <div class="image">
-                 <img src="./${project.name}/preview.png" alt="">
+                 <img src="./${project.name}/preview.png" onerror="this.src='logo.png'"  alt="">
               </div>
               <div class="card-data">
                   <p class="card-heading">${project.name}</p>
-                  <a href=${project.link}><button class="btnn">View</button></a>
+                  <a href=${project.link} target="_blank"><button class="btnn">View</button></a>
               </div>
        
           </div>`;
